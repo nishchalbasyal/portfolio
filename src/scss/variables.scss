@@ -1,0 +1,28 @@
+$lightblue : rgb(37, 6, 160);
+$orange: orange;
+$lightorange: rgb(224, 169, 85);
+
+@mixin button-group($color:white ,$backgroundColor:coral ,$hbackgroundColor:rgb(241, 165, 137)) {
+    button {
+        margin-right: 5px;
+        padding: 6px;
+        border: none;
+        color: $color;
+        background-color: $backgroundColor;
+        box-shadow: 10px 10px 18px rgba(0, 0, 0, 0.4);
+        cursor: pointer;
+
+
+        &:hover {
+            background-color:$hbackgroundColor;
+        }
+
+        @include responsive() {
+            font-size: 10px;
+            width: 60px;
+            padding: 8px 8px;
+
+        }
+
+    }
+}

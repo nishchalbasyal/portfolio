@@ -1,0 +1,205 @@
+@import "variables";
+@import "Responsive";
+
+.about {
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    background-color: white;
+    color: wheat;
+    justify-content: center;
+    align-items: center;
+    min-height: 500px;
+
+
+    @include responsive() {
+         padding: 5px;
+
+   }
+
+
+    .box {
+        width: 70%;
+        background-image: linear-gradient(135deg, rgb(39, 39, 39), rgb(110, 107, 107), );
+        height: fit-content;
+        border-radius: 10px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+ 
+ 
+        @include responsive() {
+            justify-content: flex-start;
+            width: 90%;
+
+      }
+
+
+        h1{
+            font-size: 25px;
+
+            @include responsive() {
+                font-size: 18px;
+       
+          }
+        }
+
+
+        hr {
+            width: 200px;
+            border: 1px solid lightblue;
+        }
+
+        .section {
+            width: 100%;
+            height: fit-content;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+            @include responsive() {
+                font-size: 5px;
+                padding: 0px;
+       
+          }
+ 
+            .image-box {
+                width: 300px;
+                margin: 15px 20px 0px 20px;
+                 
+                @include responsive(){
+                    display: none;
+                 }
+
+                img {
+                    width: 150px;
+                    border-radius: 50%;
+
+
+                }
+            }
+
+            .content-box {
+                width: 100%;
+                height: 800px;
+                height: fit-content;
+ 
+                p {
+                    font-size: 13px;
+                    margin: 15px 0px;
+                    letter-spacing: 0.09em;
+                    line-height: 1.3rem;
+                    
+
+                    @include responsive() {
+                        font-size: 10px;
+                         line-height: 1rem;
+                         margin: 10px 0px;
+
+
+                   }
+                }
+
+                .socialLinks {
+                    width: 100%;
+                    height: fit-content;
+                    margin: 10px 0px;
+                     h2{
+                        font-size: 18px;
+                        @include responsive() {
+                             font-size: 14px;
+                 
+    
+    
+                       }
+                    }
+
+                    .icon-group {
+                        display: block;
+                        width: 100%;
+                        margin-top: 10px;
+                        @include responsive() {
+                            margin-top: 5px;                
+   
+   
+                      }
+
+                        .social-icon {
+                            margin: 5px;
+                        }
+
+
+                    }
+                }
+
+                .email{
+                    width: 100%;
+                    height: fit-content;
+                    h2{
+                        font-size: 18px;
+                        @include responsive() {
+                            font-size: 14px;
+                
+   
+   
+                      }
+                        
+                    }
+
+                    span{
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        p{
+                            font-size: 15px;
+                            margin-left: 3px;
+                            @include responsive() {
+                                font-size: 12px;
+                    
+       
+       
+                          }
+                        }
+                    }
+
+
+                }
+
+                .btn-group{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    
+                    button{
+                        font-size: 15px;
+                        padding: 10px;
+                        margin-right: 5px;
+                        background-image: linear-gradient(45deg,coral,lightcoral);
+                        border: none;
+                        border-radius: 3px;
+                        color: white;
+                        font-weight: 600;
+                        cursor: pointer;
+
+                        &:hover{
+                            padding: 8px;
+                            font-size: 13px;
+                        }
+
+                        @include responsive() {
+                            font-size: 11px;
+                            padding: 7px;
+                   
+                      }
+                    }
+
+                }
+
+            }
+        }
+    }
+}

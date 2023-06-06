@@ -1,0 +1,39 @@
+@import "variables";
+@import "Responsive";
+
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    background-image: linear-gradient(45deg, rgb(29, 29, 93), rgb(0, 157, 255));
+    width: 100%;
+    color: white;
+    height: 100px;
+    align-items: center;
+
+
+    p {
+        margin-top: 3px;
+        font-size: 13px;
+        padding: 20px;
+
+        @include responsive(){
+            font-size: 10px;
+            padding: 10px;
+
+
+        }
+    }
+
+    .section2 {
+        display: flex;
+        justify-content: space-around;
+        margin-right: 10px;
+
+
+        @include button-group();
+
+
+    }
+
+}

@@ -1,0 +1,282 @@
+.project {
+    display: flex;
+    flex-direction: column;
+    background-color: lightblue;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+    color: white;
+    width: 100%;
+    height: fit-content;
+
+    @include responsive() {
+        padding: 10px;
+
+
+    }
+
+    h1 {
+
+        margin: 5px 0px 5px 0px;
+        color: black;
+        font-size: 23px;
+
+        @include responsive() {
+            font-size: 15px;
+
+
+        }
+
+
+
+    }
+
+    hr {
+        width: 250px;
+        border: 1px solid rgb(0, 0, 0);
+
+        
+        @include responsive(){
+              width: 100px;
+
+         }
+
+    }
+
+    .project-section {
+
+        display: flex;
+        width: 100%;
+        height: fit-content;
+        flex-wrap: wrap;
+        padding: 15px;
+        justify-content: center;
+        align-items: center;
+
+        @include responsive() {
+            padding: 0px;
+            padding: 5px;
+
+        }
+
+        .container {
+            width: 250px;
+            height: 320px;
+            margin: 15px;
+      
+               @include responsive() {
+                width: 150px;
+                margin: 5px;
+                height: 280px;
+
+
+            }
+
+            .card {
+
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transition: transform 1500ms;
+                transform-style: preserve-3d;
+ 
+
+
+                .front {
+                    background-image: linear-gradient(135deg, black, rgb(64, 64, 64), );
+                    color: white;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+                    position: absolute;
+                    padding: 15px;
+                    backface-visibility: hidden;
+                    height: 100%;
+                    width: 100%;
+
+                    @include responsive() {
+                        padding: 5px;
+         
+                    }
+
+
+                    h1 {
+                        color: white;
+                        font-size: 18px;
+                        margin: 10px 0px;
+
+                        @include responsive() {
+                            font-size: 16px;
+
+
+                        }
+                    }
+
+                    .image {
+                        width: 100%;
+ 
+                        img {
+                            width: 100%;
+                            border: 5px solid rgb(255, 255, 255);
+                            border-radius: 3px;
+
+                         
+                        }
+                    }
+
+                    p {
+                        font-size: 10px;
+                        letter-spacing: 0.09em;
+                        margin: 10px 0px;
+                            @include responsive() {
+                             font-size: 8px;
+                             margin: 10px 0px;
+                            letter-spacing: 0.09em;
+
+                        }
+
+                    }
+
+     
+
+                    .tags {
+                        width: 100%;
+                        margin: 6px 0px;
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        align-items: center;
+                        background-color: lightblue;
+ 
+ 
+
+                        .tag {
+                            margin: 3px;
+                            background: white;
+                            color: black;
+                            padding: 3px;
+                            font-size: 9px;
+
+                            @include responsive() {
+                                font-size: 7px;
+                                padding: 2px;
+    
+                           }
+ 
+                        }
+                    }
+
+                }
+
+                .back {
+                    width: 100%;
+                    height: 100%;
+                    background-image: linear-gradient(135deg, black, rgb(64, 64, 64), );
+                    color: white;
+                    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+                    position: absolute;
+                    transform: rotateY(180deg);
+                    backface-visibility: hidden;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+
+                    button {
+                        font-size: 14px;
+                        padding: 15px;
+                        margin: 3px;
+                        background-image: linear-gradient(45deg, rgb(0, 0, 0), rgb(65, 64, 64));
+                        border: 2px solid white;
+                        color: white;
+                        cursor: pointer;
+
+                        @include responsive() {
+                            font-size: 10px;
+                            padding: 10px;
+
+                       }
+
+                        &:hover{
+                            font-size: 13px;
+                            padding: 13px;
+                            @include responsive() {
+                                font-size: 7px;
+                                padding: 7px;
+    
+                           }
+                        }
+                    }
+
+
+
+
+                }
+
+            }
+
+            &:hover {
+                .card {
+
+                    // background-image: url("https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?cs=srgb&dl=pexels-tranmautritam-69432.jpg&fm=jpg");
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    transform: rotateY(180deg);
+
+                }
+            }
+        }
+
+
+    }
+
+    .pagination{
+        width: 100%;
+        text-align: center;
+
+        button{
+            padding: 0px 5px;
+            margin: 2px;
+            background-color: transparent;
+            cursor: pointer;
+            
+            &:hover{
+                border-color: coral;
+                
+            }
+        }
+        button.active{
+           border-color: coral;
+        }
+
+
+
+    
+    
+    }
+    
+    .category{
+        width: 100%;
+        text-align: center;
+        padding: 15px 0px;
+        
+        button{
+            
+            background-color: rgb(215, 234, 240);
+            color: rgb(0, 0, 0);
+            margin: 5px;
+            padding: 5px 7px;
+            cursor: pointer;
+            border: none;
+            box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+          
+            
+            &:hover{
+                background-color: white;
+            }
+        }
+        .active{
+            background-color: white;
+        }
+    }
+
+}

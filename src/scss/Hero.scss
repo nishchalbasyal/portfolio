@@ -1,0 +1,136 @@
+@import "variables";
+@import "Responsive";
+.Hero {
+    display: flex;
+    background-color: rgb(255, 255, 255);
+    justify-content: space-around;
+    width: 100%;
+    height: fit-content;
+    padding: 20px;
+
+
+
+
+    .text-section {
+        flex: 2;
+        padding: 20px;
+
+        @include responsive(){
+            padding: 0px;
+        }
+
+        .headline{
+             font-weight: 700;
+             font-size: 33px;
+
+             @include responsive(){
+                
+                font-size: 18px;
+            }
+
+             strong{
+                font-weight: 900;
+                color: lightcoral;
+                text-shadow: 5px 5px 5px rgba;
+             }
+
+        }
+
+        .paragraph{
+            margin: 7px 0px;
+            font-size: 13px;
+            letter-spacing: 1px;
+
+            @include responsive(){
+                font-size: 9px;
+            }
+        }
+
+        .btn-group{
+            margin: 10px 0px;
+
+            .button{
+                font-size: 12px;
+                padding: 10px;
+                border: 2px solid black;
+                font-weight: 600;
+                color: black;
+                background-color: white;
+                cursor: pointer;
+
+                @include responsive(){
+                    font-size: 9px;
+                    padding: 7px;
+                }
+
+                &:hover{
+                     border-color: rgb(85, 85, 85);
+ 
+                    @include responsive(){
+                        font-size: 9px;
+                     }
+                 }
+             }
+
+             .btn-filled{
+                margin-left: 10px;
+                background-color: black;
+                color: white;
+                &:hover{
+                    font-size: 9px;
+                    background-color: rgb(59, 59, 59);
+                    border-color: rgb(59, 59, 59);
+                      @include responsive(){
+                        font-size: 10px;
+                     }
+                 }
+             }
+
+
+        }
+    }
+
+    .image-section {
+        flex: 1;
+        padding: 10px;
+        
+        @include responsive(){
+            margin-left: 15px;
+            padding: 0px;
+        }
+
+        .profile-image {
+            position: relative;
+            width: fit-content;
+            padding: 0px 10px 5px 0px;
+            
+
+
+            img {
+
+                position: absolute;
+                width: 200px;
+                border-radius: 0px 0px 0px 100px;
+                border: 0px solid black;
+                box-shadow: 8px 8px 0px lightcoral;
+
+
+                @include responsive(){
+                    top: 20px;
+                    border-radius: 0px 0px 0px 50px;
+                    width: 100px;
+
+                 }
+
+            }
+
+
+        }
+
+     
+
+
+
+    }
+
+}

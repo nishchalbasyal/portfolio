@@ -1,0 +1,153 @@
+{
+    "projects":[
+        {
+            "id":"1",
+            "title":"Travel Publishing Plaform",
+            "description": "Blogging Platform For User Where They Can Post And Vote The Blogs",
+            "image":"/images/TravelPublishingPlatform.png",
+            "githubLink":"https://github.com/nishchalbasyal/tpublishing_platform_react",
+            "preview":"https://bit.ly/3qiZrXR",
+            "tags":["React","Express","Firebase","SAAS","MongoDB","MERN"],
+            "featured":"true"
+
+        },
+        {
+            "id":"2",
+            "title":"MERN Blog Website With FireBase",
+            "description": " Blog Website Using MERN Stack. Where User Can Upvote, DownVote & Comments The Specific Article",
+            "image":"",
+            "githubLink":"https://github.com/nishchalbasyal/ecommerce-ui",
+            "preview":"",
+            "tags":["React","Express","Express","MongoDB","MERN"],
+            "featured":"true"
+
+
+
+        },
+        {
+            "id":"3",
+            "title":"Ecommerce Website UI",
+            "description": "Ecommerce Website UI Using React & Styled Components",
+            "image":"",
+            "githubLink":"https://github.com/nishchalbasyal/ecommerce-ui",
+            "preview":"",
+            "tags":["React","Styled Component"],
+            "featured":"false"
+
+
+        },
+        {
+            "id":"4",
+            "title":"Shopping Cart",
+            "description": "Ecommerce Shopping Cart To Explore useReducer And useContext API React Hooks",
+            "image":"/images/ShoppingCart.png",
+            "githubLink":"https://github.com/nishchalbasyal/shopping_cart",
+            "preview":"https://bit.ly/3CaAWPs",
+            "tags":["React","Styled Component"],
+            "featured":"true"
+
+
+        },
+        {
+            "id":"5",
+            "title":"React Router Website",
+            "description": "React Website To Clear React Router Concepts",
+            "image":"/images/reactRouter.png",
+            "githubLink":"https://github.com/nishchalbasyal/Augmented-reality-App",
+            "preview":"https://bit.ly/3CaAWPs",
+            "tags":["React","React-Dom","React Router"],
+            "featured":"false"
+
+
+        },
+        {
+            "id":"6",
+            "title":"Agumented Reality Android App",
+            "description": "Simple Argument Reality Android App Using Google ArCore",
+            "image":"",
+            "githubLink":"https://github.com/nishchalbasyal/Augmented-reality-App",
+            "preview":"",
+            "tags":["AR","Android","Google Ar Core"],
+            "featured":"true"
+
+
+        },
+        {
+            "id":"7",
+            "title":"Tic Tac Toe Android App",
+            "description": "Tic Tac Toe Mobile Game App ",
+            "image":"",
+            "githubLink":"https://github.com/nishchalbasyal/TicTacToe",
+            "preview":"",
+            "tags":["Android Studio","Android","Android Game"],
+            "featured":"true"
+
+
+        },
+ 
+        {
+            "id":"8",
+            "title":"Express API Using JWT",
+            "description": "Express API where JWT and Bcrypt Are Implemented To User Authentication and encrypt password",
+            "image":"",
+            "githubLink":"https://github.com/nishchalbasyal/jwt-express-api",
+            "preview":"",
+            "tags":["Express", "API","JWT","bcrypt"],
+            "featured":"true"
+
+
+        },
+        {
+            "id":"9",
+            "title":"JavaScript Calculator",
+            "description": "Simple HTML, CSS & Js Calculator",
+            "image":"",
+            "githubLink":"https://github.com/nishchalbasyal/JavascriptCalculator",
+            "preview":"",
+            "tags":["HTML","CSS","Javascript"],
+            "featured":"false"
+
+
+        },
+        {
+            "id":"10",
+            "title":"JavaScript Stopwatch",
+            "description": "MyFirst Js Project",
+            "image":"",
+            "githubLink":"https://github.com/nishchalbasyal/stopwatch",
+            "preview":"",
+            "tags":["HTML","CSS","Javascript"],
+            "featured":"false"
+
+
+        },
+        {
+            "id":"11",
+            "title":"Elearning Platform Asp.Net WebForm",
+            "description": "Asp.Net Clz Project",
+            "image":"",
+            "githubLink":"https://github.com/nishchalbasyal/E-learn_ASP.NET_web-form",
+            "preview":"",
+            "tags":["Asp.Net","C#"],
+            "featured":"false"
+
+
+        },
+        {
+            "id":"11",
+            "title":"Retail Exploritary Data Analysis ",
+            "description": "Data Science Internship Project",
+            "image":"",
+            "githubLink":"https://github.com/nishchalbasyal/exploritary_data_analysis_retail",
+            "preview":"https://bit.ly/3WZ9PQT",
+            "tags":["Data Analysis","Python","Data Science"],
+            "featured":"false"
+
+
+        }
+ 
+
+ 
+    
+    ]
+}
