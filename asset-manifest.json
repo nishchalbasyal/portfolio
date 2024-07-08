@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.1fad0dea.css",
+    "main.css": "/static/css/main.3196d853.css",
     "main.js": "/static/js/main.5bbbc2e0.js",
     "static/media/Urbanist-ExtraBold.ttf": "/static/media/Urbanist-ExtraBold.c7e8653730b4261a66b2.ttf",
     "static/media/Urbanist-Black.ttf": "/static/media/Urbanist-Black.5f1f14f5f25adfb3ff24.ttf",
@@ -10,7 +10,7 @@
     "index.html": "/index.html"
   },
   "entrypoints": [
-    "static/css/main.1fad0dea.css",
+    "static/css/main.3196d853.css",
     "static/js/main.5bbbc2e0.js"
   ]
 }
