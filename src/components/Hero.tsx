@@ -1,6 +1,11 @@
-import { Link} from "react-scroll";
+import { Link } from "react-scroll";
+import type { Dispatch, SetStateAction } from "react";
 
-const Hero = ({setOpenModal}) => {
+type HeroProps = {
+  setOpenModal: Dispatch<SetStateAction<boolean>>;
+};
+
+const Hero = ({ setOpenModal }: HeroProps) => {
   return (
     <div className="Hero">
       <div className="text-section">
@@ -21,15 +26,24 @@ const Hero = ({setOpenModal}) => {
         </div>
 
         <div className="btn-group">
-          <button className="button" onClick={()=>setOpenModal(true)}>Contact Me</button>
-          <Link className="button btn-filled" to="projects" duration={500} smooth={true} >See My Projects</Link>
-         </div>
+          <button className="button" onClick={() => setOpenModal(true)}>
+            Contact Me
+          </button>
+          <Link
+            className="button btn-filled"
+            to="projects"
+            duration={500}
+            smooth={true}
+          >
+            See My Projects
+          </Link>
+        </div>
       </div>
 
       <div className="image-section">
         <div className="profile-image">
           <img src="profile-22.jpg" alt="Nishchal Basyal"></img>
-         </div>
+        </div>
       </div>
     </div>
   );

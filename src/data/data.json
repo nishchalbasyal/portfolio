@@ -1,5 +1,6 @@
 {
     "projects":[
+
         {
             "id":"1",
             "title":"Travel Publishing Plaform",
@@ -144,6 +145,24 @@
             "featured":"false"
 
 
+        },
+        {
+          "id": "2",
+          "title": "LLM Chatbot with LangGraph (Tools + Memory)",
+          "description": "Built an LLM-based chatbot using LangGraph with tool integration and persistent memory using SQLite. Supports conversation flow management, tool execution (calculator, search APIs), and thread-based chat history using a checkpointer. Focused on understanding agent behavior, tool interaction, and maintaining context across sessions.",
+          "image": "/images/chatbotLanggraph.png",
+          "githubLink": "https://github.com/nishchalbasyal/agenticchat.git",
+          "preview": "",
+          "tags": [
+            "Python",
+            "LangGraph",
+            "LangChain",
+            "Streamlit",
+            "SQLite",
+            "LLM",
+            "Agentic AI"
+          ],
+          "featured": "true"
         }
  
 

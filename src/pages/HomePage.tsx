@@ -1,23 +1,25 @@
- import About from "../components/About";
+import About from "../components/About";
 import Contact from "../components/Contact";
 import ContactPopup from "../components/ContactPopup";
 import Hero from "../components/Hero";
 // import Navigation from "../components/Navigation";
 import Projects from "../components/Projects";
 import { Element } from "react-scroll";
+import type { Dispatch, SetStateAction } from "react";
 
-const HomePage = ({setOpenModal,openModal}) => {
+type HomePageProps = {
+  setOpenModal: Dispatch<SetStateAction<boolean>>;
+  openModal: boolean;
+};
 
+const HomePage = ({ setOpenModal, openModal }: HomePageProps) => {
   return (
     <div className="Home">
-      {
-        openModal &&
-      <ContactPopup setOpenModal={setOpenModal}/>
-      }
-      <Element name="hero" >
-        <Hero setOpenModal={setOpenModal}/>
+      {openModal && <ContactPopup setOpenModal={setOpenModal} />}
+      <Element name="hero">
+        <Hero setOpenModal={setOpenModal} />
       </Element>
-       <Element name="projects">
+      <Element name="projects">
         <Projects />
       </Element>
       <Element name="about">
