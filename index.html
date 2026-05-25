@@ -7,15 +7,13 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta name="description" content="Nishchal Basyal Portfolio. Personal Website" />
-    <meta http-equiv="refresh" content="20;url=https://nishchalbasyal.github.io/" />
     <link rel="apple-touch-icon" href="/portfolio/logo192.png" />
     <link rel="manifest" href="/portfolio/manifest.json" />
-    <title>New version available | Nishchal Basyal</title>
+    <title>Updated portfolio available | Nishchal Basyal</title>
     <script>
         (() => {
             const redirectUrl = "https://nishchalbasyal.github.io/";
-            const totalSeconds = 20;
-            const tickerMessage = "Breaking News: A new version of this portfolio is available now. Visit nishchalbasyal.github.io for the latest design and experience.";
+            const tickerMessage = "New updated portfolio available - click here";
 
             const injectUi = () => {
                 const style = document.createElement("style");
@@ -76,13 +74,13 @@
                 const ticker = document.createElement("div");
                 ticker.id = "portfolio-news-ticker";
                 ticker.innerHTML = `
-                    <div class="ticker-track" aria-label="News ticker">
+                    <a class="ticker-track" href="${redirectUrl}" aria-label="New updated portfolio available - click here">
                         <span class="ticker-item">${tickerMessage}</span>
                         <span class="ticker-item ticker-divider">&bull;</span>
                         <span class="ticker-item">${tickerMessage}</span>
                         <span class="ticker-item ticker-divider">&bull;</span>
                         <span class="ticker-item">${tickerMessage}</span>
-                    </div>
+                    </a>
                 `;
                 document.body.appendChild(ticker);
 
@@ -104,27 +102,8 @@
                     "text-align:center"
                 ].join(";");
 
-                banner.innerHTML = '<div style="font-size:15px;margin-bottom:4px;">A new version of this portfolio is available.</div><div id="portfolio-redirect-countdown" style="font-weight:500;opacity:.92;">Redirecting in 20 seconds to <a href="https://nishchalbasyal.github.io/" style="color:#93c5fd;text-decoration:underline;">nishchalbasyal.github.io</a>.</div>';
+                banner.innerHTML = '<div style="font-size:15px;margin-bottom:4px;">Updated portfolio available.</div><div style="font-weight:500;opacity:.92;"><a href="https://nishchalbasyal.github.io/" style="color:#93c5fd;text-decoration:underline;">Click here to open the new portfolio</a>.</div>';
                 document.body.appendChild(banner);
-
-                const countdown = banner.querySelector("#portfolio-redirect-countdown");
-                let remaining = totalSeconds;
-
-                const tick = () => {
-                    if (countdown) {
-                        countdown.textContent = `Redirecting in ${remaining} seconds to nishchalbasyal.github.io.`;
-                    }
-
-                    if (remaining <= 0) {
-                        window.location.replace(redirectUrl);
-                        return;
-                    }
-
-                    remaining -= 1;
-                    window.setTimeout(tick, 1000);
-                };
-
-                tick();
             };
 
             if (document.readyState === "loading") {
