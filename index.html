@@ -13,7 +13,7 @@
     <script>
         (() => {
             const redirectUrl = "https://nishchalbasyal.github.io/";
-            const tickerMessage = "New updated portfolio available - click here";
+            const tickerMessage = "New version of this portfolio available.";
 
             const injectUi = () => {
                 const style = document.createElement("style");
@@ -38,24 +38,19 @@
 
                     #portfolio-news-ticker .ticker-track {
                         display: flex;
-                        width: max-content;
-                        min-width: 100%;
-                        white-space: nowrap;
-                        animation: portfolio-ticker-scroll 18s linear infinite;
+                        align-items: center;
+                        justify-content: center;
+                        width: 100%;
+                        min-height: 56px;
+                        white-space: normal;
+                        text-align: center;
+                        text-decoration: none;
+                        color: #fff;
                     }
 
                     #portfolio-news-ticker .ticker-item {
-                        flex: 0 0 auto;
-                        padding: 14px 1.25rem;
-                    }
-
-                    #portfolio-news-ticker .ticker-divider {
-                        opacity: 0.8;
-                    }
-
-                    @keyframes portfolio-ticker-scroll {
-                        from { transform: translateX(0); }
-                        to { transform: translateX(-50%); }
+                        flex: 0 1 auto;
+                        padding: 0 0.25rem;
                     }
 
                     @media (max-width: 640px) {
@@ -63,9 +58,11 @@
                             padding-top: 118px !important;
                         }
 
-                        #portfolio-news-ticker .ticker-item {
-                            padding: 12px 1rem;
+                        #portfolio-news-ticker .ticker-track {
+                            min-height: 64px;
                             font-size: 13px;
+                            line-height: 1.45;
+                            padding: 0.5rem 0.75rem;
                         }
                     }
                 `;
@@ -74,12 +71,10 @@
                 const ticker = document.createElement("div");
                 ticker.id = "portfolio-news-ticker";
                 ticker.innerHTML = `
-                    <a class="ticker-track" href="${redirectUrl}" aria-label="New updated portfolio available - click here">
+                    <a class="ticker-track" href="${redirectUrl}" aria-label="New version of this portfolio available. Click here to open the new portfolio.">
                         <span class="ticker-item">${tickerMessage}</span>
-                        <span class="ticker-item ticker-divider">&bull;</span>
-                        <span class="ticker-item">${tickerMessage}</span>
-                        <span class="ticker-item ticker-divider">&bull;</span>
-                        <span class="ticker-item">${tickerMessage}</span>
+                        <span class="ticker-item"><strong><u>Click Here</u></strong></span>
+                        <span class="ticker-item">to open the new portfolio</span>
                     </a>
                 `;
                 document.body.appendChild(ticker);
