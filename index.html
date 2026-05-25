@@ -11,7 +11,129 @@
     <link rel="apple-touch-icon" href="/portfolio/logo192.png" />
     <link rel="manifest" href="/portfolio/manifest.json" />
     <title>New version available | Nishchal Basyal</title>
-    <script>(() => { const e = "https://nishchalbasyal.github.io/", t = 20, n = () => { const n = document.createElement("div"); n.style.cssText = ["position:fixed", "top:16px", "left:50%", "transform:translateX(-50%)", "z-index:2147483647", "max-width:min(92vw,720px)", "padding:14px 18px", "border-radius:14px", "background:rgba(15, 23, 42, 0.92)", "color:#fff", "font:600 14px/1.5 system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif", "box-shadow:0 12px 40px rgba(0,0,0,.28)", "backdrop-filter:blur(10px)", "text-align:center"].join(";"); n.innerHTML = '<div style="font-size:15px;margin-bottom:4px;">A new version of this portfolio is available.</div><div id="portfolio-redirect-countdown" style="font-weight:500;opacity:.92;">Redirecting in 20 seconds to <a href="https://nishchalbasyal.github.io/" style="color:#93c5fd;text-decoration:underline;">nishchalbasyal.github.io</a>.</div>', document.body.appendChild(n); const o = n.querySelector("#portfolio-redirect-countdown"); let i = t; const r = () => { o && (o.textContent = `Redirecting in ${i} seconds to nishchalbasyal.github.io.`), i <= 0 ? window.location.replace(e) : (i -= 1, window.setTimeout(r, 1e3)) }; r() }; "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", n, { once: !0 }) : n() })();</script>
+    <script>
+        (() => {
+            const redirectUrl = "https://nishchalbasyal.github.io/";
+            const totalSeconds = 20;
+            const tickerMessage = "Breaking News: A new version of this portfolio is available now. Visit nishchalbasyal.github.io for the latest design and experience.";
+
+            const injectUi = () => {
+                const style = document.createElement("style");
+                style.textContent = `
+                    body {
+                        padding-top: 104px !important;
+                    }
+
+                    #portfolio-news-ticker {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        z-index: 2147483647;
+                        overflow: hidden;
+                        background: #d60000;
+                        color: #fff;
+                        font: 700 14px/1.2 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+                        letter-spacing: 0.04em;
+                        box-shadow: 0 6px 24px rgba(0, 0, 0, 0.25);
+                    }
+
+                    #portfolio-news-ticker .ticker-track {
+                        display: flex;
+                        width: max-content;
+                        min-width: 100%;
+                        white-space: nowrap;
+                        animation: portfolio-ticker-scroll 18s linear infinite;
+                    }
+
+                    #portfolio-news-ticker .ticker-item {
+                        flex: 0 0 auto;
+                        padding: 14px 1.25rem;
+                    }
+
+                    #portfolio-news-ticker .ticker-divider {
+                        opacity: 0.8;
+                    }
+
+                    @keyframes portfolio-ticker-scroll {
+                        from { transform: translateX(0); }
+                        to { transform: translateX(-50%); }
+                    }
+
+                    @media (max-width: 640px) {
+                        body {
+                            padding-top: 118px !important;
+                        }
+
+                        #portfolio-news-ticker .ticker-item {
+                            padding: 12px 1rem;
+                            font-size: 13px;
+                        }
+                    }
+                `;
+                document.head.appendChild(style);
+
+                const ticker = document.createElement("div");
+                ticker.id = "portfolio-news-ticker";
+                ticker.innerHTML = `
+                    <div class="ticker-track" aria-label="News ticker">
+                        <span class="ticker-item">${tickerMessage}</span>
+                        <span class="ticker-item ticker-divider">&bull;</span>
+                        <span class="ticker-item">${tickerMessage}</span>
+                        <span class="ticker-item ticker-divider">&bull;</span>
+                        <span class="ticker-item">${tickerMessage}</span>
+                    </div>
+                `;
+                document.body.appendChild(ticker);
+
+                const banner = document.createElement("div");
+                banner.style.cssText = [
+                    "position:fixed",
+                    "top:56px",
+                    "left:50%",
+                    "transform:translateX(-50%)",
+                    "z-index:2147483646",
+                    "max-width:min(92vw,720px)",
+                    "padding:14px 18px",
+                    "border-radius:14px",
+                    "background:rgba(15, 23, 42, 0.92)",
+                    "color:#fff",
+                    "font:600 14px/1.5 system-ui,-apple-system,BlinkMacSystemFont,\"Segoe UI\",sans-serif",
+                    "box-shadow:0 12px 40px rgba(0,0,0,.28)",
+                    "backdrop-filter:blur(10px)",
+                    "text-align:center"
+                ].join(";");
+
+                banner.innerHTML = '<div style="font-size:15px;margin-bottom:4px;">A new version of this portfolio is available.</div><div id="portfolio-redirect-countdown" style="font-weight:500;opacity:.92;">Redirecting in 20 seconds to <a href="https://nishchalbasyal.github.io/" style="color:#93c5fd;text-decoration:underline;">nishchalbasyal.github.io</a>.</div>';
+                document.body.appendChild(banner);
+
+                const countdown = banner.querySelector("#portfolio-redirect-countdown");
+                let remaining = totalSeconds;
+
+                const tick = () => {
+                    if (countdown) {
+                        countdown.textContent = `Redirecting in ${remaining} seconds to nishchalbasyal.github.io.`;
+                    }
+
+                    if (remaining <= 0) {
+                        window.location.replace(redirectUrl);
+                        return;
+                    }
+
+                    remaining -= 1;
+                    window.setTimeout(tick, 1000);
+                };
+
+                tick();
+            };
+
+            if (document.readyState === "loading") {
+                document.addEventListener("DOMContentLoaded", injectUi, { once: true });
+            } else {
+                injectUi();
+            }
+        })();
+    </script>
     <script defer="defer" src="/portfolio/static/js/main.63139e80.js"></script>
     <link href="/portfolio/static/css/main.79406316.css" rel="stylesheet">
 </head>
